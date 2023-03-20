@@ -10,9 +10,9 @@ if __name__ == "__main__":
     assert response.status_code == 200
     assert "Django administration" in str(response.content)
 
-    response = requests.get("http://127.0.0.1:8000/admin", allow_redirects=False)
+    response = requests.get("http://127.0.0.1:8000/admin/", allow_redirects=False)
     assert response.status_code == 302
-    assert response.url == "http://127.0.0.1:8000/admin"
+    assert response.url == "http://127.0.0.1:8000/admin/"
 
 
     response = requests.post("http://127.0.0.1:8000", data={})
